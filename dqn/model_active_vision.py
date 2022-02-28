@@ -43,9 +43,9 @@ class NaturalHead(nn.Module):
      
         # fully connected layer for natural actions  
         self.fc = nn.Sequential(
-            nn.Linear(in_features=64*7*7 , out_features=action_space.n), #512
-            #nn.ReLU(),
-            #nn.Linear(in_features=10, out_features=action_space.n)#512
+            nn.Linear(in_features=64*7*7 , out_features=512),
+            nn.ReLU(),
+            nn.Linear(in_features=512, out_features=action_space.n)
         )
         
     # compute value for natural actions
@@ -64,9 +64,9 @@ class VisionHead(nn.Module):
 
         # fully connected layer for natural actions  
         self.fc = nn.Sequential(
-            nn.Linear(in_features=64*7*7 , out_features=n),  #512
-            #nn.ReLU(),
-            #nn.Linear(in_features=10, out_features=n)#512
+            nn.Linear(in_features=64*7*7 , out_features=512),
+            nn.ReLU(),
+            nn.Linear(in_features=512, out_features=n)
         )
         
     # compute value for natural actions

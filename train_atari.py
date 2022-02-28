@@ -32,7 +32,7 @@ if __name__ == '__main__':
         "dqn_type":"nature", # dnn archictecture
         "num-steps": int(1e6),# total number of steps to run the environment for
         "batch-size": 32,  # number of transitions to optimize at the same time
-        "learning-starts": 1,# 10000,  # number of steps before learning starts
+        "learning-starts": 10000,  # number of steps before learning starts
         "learning-freq": 1,  # number of iterations between every optimization step
         "use-double-dqn": True,  # use double deep Q-learning
         "target-update-freq": 1000,  # number of iterations between every target network update
